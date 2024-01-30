@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Image Search App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This React application allows users to search for images using the Unsplash API. Users can enter a search term, and the app displays a list of relevant images.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+Follow the instructions below to get the project up and running on your local machine.
 
-### `npm start`
+### Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Make sure you have Node.js and npm installed on your machine.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Installation
 
-### `npm test`
+1. Clone the repository:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   git clone https://github.com/your-username/image-search-app.git
+   ```
 
-### `npm run build`
+2. Navigate to the project directory:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   cd image-search-app
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Install dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+4. Create a `.env` file in the root directory and add your Unsplash API key:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```env
+   REACT_APP_UNSPLASH_API_KEY=your_api_key_here
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   Replace `your_api_key_here` with your actual Unsplash API key.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. Start the development server:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm start
+   ```
 
-## Learn More
+   The app should now be running at [http://localhost:3000](http://localhost:3000).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Open the app in your web browser.
 
-### Code Splitting
+2. Enter a search term in the search bar and press Enter.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. View the list of images related to the search term.
 
-### Analyzing the Bundle Size
+## Components
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### App
 
-### Making a Progressive Web App
+The main component that serves as the entry point for the application. It handles state related to images and passes data to the `SearchBar` and `ImageList` components.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### ImageList
 
-### Advanced Configuration
+A component responsible for rendering a list of images. It receives an array of image data as props and maps through the array to render individual `ImageShow` components.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### ImageShow
 
-### Deployment
+A simple component that displays a single image. It receives image data as props and renders the image with its description.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### SearchBar
 
-### `npm run build` fails to minify
+A component that provides a search input field. It handles user input and triggers a search when the user submits the form.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Dependencies
+
+- [axios](https://github.com/axios/axios): Used for making HTTP requests to the Unsplash API.
+- [React](https://reactjs.org/): A JavaScript library for building user interfaces.
+
+## Contributing
+
+Feel free to contribute to the project by opening issues or submitting pull requests.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
