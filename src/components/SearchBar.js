@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import "./searchBar.css";
 
-const SeachBar = (props) => {
+const SearchBar = (props) => {
   const { onSubmit } = props;
   const [term, setTerm] = useState("");
   const handleFormSubmit = (event) => {
@@ -12,10 +13,13 @@ const SeachBar = (props) => {
     setTerm(event.target.value);
   };
   return (
-    <form onSubmit={handleFormSubmit}>
-      <input value={term} onChange={handleChange} />
-    </form>
+    <div className="searc-bar">
+      <form onSubmit={handleFormSubmit}>
+        <label>Enter Search Term</label>
+        <input value={term} onChange={handleChange} />
+      </form>
+    </div>
   );
 };
 
-export default SeachBar;
+export default SearchBar;
