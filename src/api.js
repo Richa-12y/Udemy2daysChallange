@@ -10,7 +10,7 @@ const searchImages = async (term) => {
         query: term,
       },
     });
-    console.log(response, "response");
+    // console.log(response, "response");
     return response.data.results;
   } catch (error) {
     console.error("Error in API request:", error);
